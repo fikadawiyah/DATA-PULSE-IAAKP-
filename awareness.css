@@ -1,0 +1,201 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 5px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: rgba(46, 125, 50, 0.4);
+  padding: 15px 20px;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+}
+
+.attitudeTitle {
+  margin-left: 10px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #d4edda;
+}
+
+.awarenessTitle {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #d4edda;
+  }
+
+.knowledgeTitle {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #d4edda;
+  }
+
+  .perceptionTitle {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #d4edda;
+  }
+
+  .practiceTitle {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #d4edda;
+  }
+
+  .title {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #d4edda;
+  }
+
+
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  width: 900px;
+  min-height: 500px;
+  text-align: center;
+  position: relative;
+  margin-top: 80px; /* Adjusted for navbar */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.awareness {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.awareness-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.attitude {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.attitude-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.knowledge {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.knowledge-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.perception {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.perception-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.practice {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.practice-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.column {
+  flex: 1;
+}
+
+.likert-scale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.likert-scale input {
+  margin: 0 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #8ea88e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top:20px;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+

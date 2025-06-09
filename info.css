@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5px;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(46, 125, 50, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-radius: 0 0 15px 15px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+/* White Container Style */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 1000px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 70px; /* Ensure it doesn't overlap with the navbar */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 15px;
+    color: #2e7d32;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Form Container */
+form {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Left and Right Sections */
+.left-section, .right-section {
+    flex: 1;
+    min-width: 45%;
+}
+
+/* Form Fields Styling */
+label {
+    font-weight: 500;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+}
+
+/* Form Inputs */
+input, select {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background: linear-gradient(145deg, #f9f9f9, #f1f1f1);
+    transition: 0.3s;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, select:focus {
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    border-color: #2e7d32;
+    box-shadow: 0 0 12px rgba(46, 125, 50, 0.4);
+}
+
+/* Gender Radio Buttons Inline */
+.radio-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+}
+
+/* Submit Button */
+button {
+    background: linear-gradient(145deg, #2e7d32, #388e3c);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200px; /* Set a fixed width for the button */
+    margin: 20px auto; /* Center the button horizontally */
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(145deg, #1b5e20, #2e7d32);
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Section Styling */
+.info-box {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    color: #333;
+}
+
+.info-box-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}

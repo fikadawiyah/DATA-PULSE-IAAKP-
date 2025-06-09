@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Pulse - Index</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-left">
+    <div class="logo">
+      <img src="exploration.png" alt="Logo" class="logo-icon"> DataPulse</div>
+    <span class="title">Development of I-AAKPP Model for Community Engagement Towards Environmental Care and Solid Waste Management (Actual Study)</span>
+  </div>
+</nav>
+
+<div class="welcome-box">
+  <h1>Welcome to DataPulse <i class="fas fa-chart-bar"></i></h1>
+  <p>Your centralized hub to explore, collect and manage meaningful student data effortlessly.</p><br>
+  <a href="info.html" class="explore-btn">Enter Personal Information</a>
+</div>
+
+<!-- Dashboard Section -->
+<section class="dashboard-section">
+  <h1>Dashboard</h1>
+  <p>Visual overview of each data category:</p>
+  
+  <div class="charts-container">
+    <div class="chart-box">
+      <h3>Integrity</h3>
+      <canvas id="integrityChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>Awareness</h3>
+      <canvas id="awarenessChart"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>Attitude</h3>
+      <canvas id="attitudeChart"></canvas>
+    </div>
+    <!-- Add more charts for Knowledge, Perception, Practice if needed -->
+    <div class="chart-box">
+      <h3>Knowledge</h3>
+      <canvas id="knowledgeChart"></canvas>
+    </div>
+    
+    <div class="chart-box">
+      <h3>Perception</h3>
+      <canvas id="perceptionChart"></canvas>
+    </div>
+    
+    <div class="chart-box">
+      <h3>Practice</h3>
+      <canvas id="practiceChart"></canvas>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  function renderChart(category, chartType, canvasId, label) {
+    const ctx = document.getElementById(canvasId).getContext('2d');
+
+   
+    fetch(`https://script.google.com/macros/s/AKfycbwKubvge_DG_1Q4kPD07u6-Q7HYNLI-H0AaPwNcS6pjowzjWatjbvTNOOpx7tKBuI8tuw/exec?sheet=${category}`)
+
+      .then(response => response.json())
+      .then(data => {
+        const chartData = data[category];
+        if (!chartData) {
+          console.error(`No data found for category: ${category}`);
+          return;
+        }
+
+        new Chart(ctx, {
+          type: chartType,
+          data: {
+            labels: ['Statement 1', 'Statement 2', 'Statement 3'],
+            datasets: [{
+              label: label,
+              data: chartData,
+              backgroundColor: ['#9dc209', '#d1e189', '#4a5d23'],
+              borderColor: '#2e7d32'
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: { position: 'bottom' }
+            }
+          }
+        });
+      })
+      .catch(error => console.error(`Error loading ${category} chart:`, error));
+  }
+
+  // Call all charts
+  renderChart('integrity', 'bar', 'integrityChart', 'Integrity Level');
+  renderChart('awareness', 'pie', 'awarenessChart', 'Awareness Level');
+  renderChart('attitude', 'bar', 'attitudeChart', 'Attitude Level');
+  renderChart('knowledge', 'doughnut', 'knowledgeChart', 'Knowledge Level');
+  renderChart('perception', 'bar', 'perceptionChart', 'Perception Level');
+  renderChart('practice', 'pie', 'practiceChart', 'Practice Level');
+</script>
+
+</body>
+</html>
